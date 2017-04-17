@@ -32,7 +32,7 @@ client.on('message' , message => {
       client.user.setStatus(result);
     } else
     if (message.content === prefix + 'help') {
-      message.channel.sendMessage('**Příkazy:**\n\n`.battletag` - Můj Battletag!\n`.steam` - Můj steam!\n`.youtube` - Můj Youtube kanál!');
+      message.channel.sendMessage('**Příkazy:**\n\n`.battletag` - Můj Battletag!\n`.steam` - Můj steam!\n`.youtube` - Můj Youtube kanál!\n`.čas` - Kolik je hodin?!\n`.highlight` - zde nalezneš poslední highlight (zatím se sám neupdatuje)');
     } else
 
     if (message.content === prefix + 'battletag') {
@@ -42,9 +42,18 @@ client.on('message' , message => {
     if (message.content === prefix + 'steam') {
         message.channel.sendMessage('Můj steam je: http://steamcommunity.com/id/bassik96/');
     } else
+
     if (message.content === prefix + 'youtube') {
-        message.channel.sendMessage('Můj youtube kanál: https://www.youtube.com/c/Bassjofficial')
+        message.channel.sendMessage('Můj youtube kanál: https://www.youtube.com/c/Bassjofficial');
+    } else
+
+    if (message.content === prefix + 'čas') {
+      message.channel.sendMessage('K-k-kk-k-Kolik je?!\n**It\'s high noon!** :clock12:\nhttps://clips.twitch.tv/MushyObliviousWheelDBstyle');
+    } else
+    if (message.content === prefix + 'highlight') {
+      message.channel.sendMessage('Poslední highlight nalezeš zde: https://clips.twitch.tv/TriumphantBeautifulLasagnaGivePLZ');
     }
+
 });
 
 client.login(token);
