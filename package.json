@@ -1,0 +1,14 @@
+{
+  "name": "kldvgngbot",
+  "version": "0.0.1",
+  "description": "KLDVGNG Bot ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Corkysek",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.0.0"
+  }
+}
