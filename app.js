@@ -6,6 +6,14 @@ client.on('ready' ,() => {
     console.log('Im working');
 });
 
+client.on('ready' ,() => {
+  client.user.setStatus('dnd');
+});
+
+client.on('ready' ,() => {
+  client.user.setGame('.help / twtich.tv/bassj_');
+});
+
 var prefix = "."
 client.on('message' , message => {
     if (!message.content.startsWith(prefix)) return;
