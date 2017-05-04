@@ -23,8 +23,20 @@ client.on('message' , message => {
     console.log('Message');
     if (message.author.bot) return;
     if (message.content === prefix + 'ping') {
-        message.channel.sendMessage(`Pong! \`${Date.now() - message.createdTimestamp} ms\` :ping_pong:`);
-    } else
+      const embed = new Discord.RichEmbed()
+     .setColor("#FF0000")
+     .setTitle("Pong!");
+   let start = Date.now();
+   message.channel.sendEmbed(embed, { disableEveryone: true })
+     .then(m => {
+       m.edit('', {
+         embed: new Discord.RichEmbed()
+           .setColor("#84DE02")
+           .setTitle("Pong!:ping_pong:")
+           .setDescription(`\`${Date.now() - start}ms\``)
+       })
+     }).catch(console.error);
+ } else
 
     if (message.content.startsWith(prefix + 'game')) {
       console.log('Game set!');
